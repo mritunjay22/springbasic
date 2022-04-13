@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+     <!-- A is dependent on B -->
+      <!-- So we have to Declare Bean B first -->
+      
+      
+      
+       <!-- Bean B -->
+       <!-- A is dependent on B -->
+   <bean class="com.springcore.reference_injection.B" name="b_ref">
+   <property name="y" value ="90" />
+   </bean>
+   
+   
+     <!-- Bean A object -->
+     <bean class = "com.springcore.reference_injection.A" name="a_ref">
+     
+       <!-- First property in class A -->
+     <property name ="x" value ="40"   />       <!-- Self closing tag-->
+     
+     <!-- Reference Injection-->
+     <!-- Using <ref  />   tag we can inject the object/bean of one class into another class  -->
+     <property name="ob">			<!--this is the object of class A named ob which is dependent ob class B  -->
+     <ref bean="b_ref"  />           <!-- Here we are injecting the property/bean in class A in Object ob -->
+     
+     
+      <!-- We can write Like this also -->
+      <!--  <property name="ob" ref ="b_ref"/>    here we are using it as attribute  -->
+     
+     
+     </property>
+     
+     </bean>
+   
+   
+   
+
+
+
+
+</beans>

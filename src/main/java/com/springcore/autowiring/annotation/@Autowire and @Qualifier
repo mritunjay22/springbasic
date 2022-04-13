@@ -1,0 +1,28 @@
+How to use?
+just Define the beans with name and class like normal and put @Autowire Annotation above the following to perform the injection
+
+Ways to inject Using @Autowire
+1)  Above property/ Variable
+2)  above Setter Method
+3)   Above Constructor
+
+
+how it works?
+it will inject the bean / Object according to the Autowire Annotation position  like above
+
+
+
+
+problem?
+if Single Bean which is to be Injected is Present then it will Work perfect but it Multiple bean in XML file with same type then it will throw Exception
+[ Exception - Expected Single Found multiple]
+
+it works on byType logic
+
+
+
+Solution ?
+
+to solve this we use @Qualifier("bean name which is to be injected") ;
+it Solve the Problem Of multiple bean of same Type
+just provide the @Qualifier("name of bean which you want to inject")

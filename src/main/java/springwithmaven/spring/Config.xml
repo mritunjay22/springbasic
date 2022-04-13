@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   <!-- this is Our First bean -->
+   <!-- using setter Injection -->
+<bean class ="springwithmaven.spring.Student"  name ="student1">
+  <property name="studentId">
+  <value>101</value>
+  </property>
+  <property name="studentName">
+  <value>Mritunjay</value>
+  </property>
+  <property name="studentAddress">
+  <value>b-164</value>
+  </property>
+</bean>
+
+<!-- Second Bean (Another Object -->
+<bean class ="springwithmaven.spring.Student"  name ="student2">
+<property name="studentId" value ="102" />
+<property name="studentName"  value ="Katyayni" />        <!--     Second Object using value as attribute -->  
+<property name="studentAddress" value ="Kolar" />
+</bean>
+
+
+
+
+</beans>

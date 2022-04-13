@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   
+<bean class="com.springcore.constructor_inj.Person" name="person1">
+<!-- this bean/first object of class Person -->
+<!-- HERE WE WILL USE CONSTRUCTOR INJECTION -->
+<!-- <constructor-arg == number of parameter the constructor accept -->
+<!-- either we can use it as value tag or value attribute -->
+
+<!-- First parameter of constructor -->
+<constructor-arg>
+<value>Mritunjay</value>
+</constructor-arg>
+<!-- SECOND PARAMETER OF CONSTRUCTOR -->
+
+<constructor-arg value = "101"  />       <!-- here we used it as a attribute....    both is correct -->
+<!--  <constructor-arg value = "101" type="int" />       when we need to specify the type to call the constructor -->
+</bean>
+ 
+
+
+
+</beans>

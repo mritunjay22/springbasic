@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   
+  <bean class="com.springcore.constructor_injection_using_collections.Answer" name="answer1">
+  <constructor-arg value="101" />
+  <constructor-arg value="Mritunjay" />
+  <constructor-arg value="JAVA" />
+ 
+  </bean>
+  <bean class="com.springcore.constructor_injection_using_collections.Answer" name="answer2">
+  <constructor-arg value="102" />
+  <constructor-arg value="Katyayni" />
+  <constructor-arg value="JAVASCRIPT" />
+ 
+  </bean>
+  
+    <!-- Question Bean-->
+  <bean class="com.springcore.constructor_injection_using_collections.Question" name="ques1">
+  <constructor-arg value ="111"  type="int" />      <!-- Define type is not important -->
+  <constructor-arg value ="What the hell are you doing here?"  />
+    <!-- injection list type using reference -->
+      <!-- here injection the list of class Answers in Question by reference using ref tag -->
+  <constructor-arg>
+  <list>
+  
+  <ref bean="answer1"/>
+  <ref bean="answer2"/>
+  
+  </list>
+
+  </constructor-arg>
+  
+  </bean>
+
+
+
+
+ 
+
+
+
+</beans>

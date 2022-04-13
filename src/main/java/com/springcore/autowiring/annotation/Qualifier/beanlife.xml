@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+      
+  
+    <!-- bean definitions here -->
+   
+    <!-- To Enable All Annotation....... -->
+    <context:annotation-config />
+
+   
+    <!-- First bean-->
+<bean class="com.springcore.autowiring.annotation.Qualifier.Address" name="address1">
+
+<!-- this bean/first object of class Address -->
+<property name="name" value="Awadhpuri1"  />    <!-- -->
+<property name="plotNo" value="164"   />    <!-- -->
+
+</bean>
+
+
+ <!-- Second Bean -->
+<bean class="com.springcore.autowiring.annotation.Qualifier.Address" name="address2">
+
+<!-- this bean/first object of class Address -->
+<property name="name" value="Awadhpuri2"  />    <!-- -->
+<property name="plotNo" value="165"   />    <!-- -->
+
+</bean>
+
+
+ <!-- Third Bean -->
+<bean class="com.springcore.autowiring.annotation.Qualifier.Address" name="address3">
+
+<!-- this bean/first object of class Address -->
+<property name="name" value="Awadhpuri3"  />    <!-- -->
+<property name="plotNo" value="166"   />    <!-- -->
+
+</bean>
+
+ <!--  All bean are of same type with different name  -->
+
+
+
+  
+
+ <bean class="com.springcore.autowiring.annotation.Qualifier.Emp" name="emp1"  />         <!-- Simple Bean Declare --> 
+
+
+
+
+
+</beans>

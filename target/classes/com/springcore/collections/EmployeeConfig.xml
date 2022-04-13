@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   
+
+ <!-- First Bean Of Collection Injection -->
+<bean class="com.springcore.collections.Employee" name="emp1"    >
+<!-- NORMAL INJECTION STRING FIELD  -->
+<property name="empName" value="Mritunjay" />
+
+
+
+
+<!-- HERE  LIST  INJECTION  -->
+ <property name="phones">
+ <!-- HERE INJECTION LIST START -->
+ <list>
+ <!-- LIST INJECTION METHOD -->
+ <value>8959607562</value>
+ <value>8770740756</value>
+ <value>22012001</value>
+ <value>080520000</value>
+ </list>
+ <!-- HERE INJECTION LIST COMPLETE -->
+ </property>
+ 
+ 
+ 
+ 
+ <!-- HERE  SET  INJECTION  -->
+ <property name="address">
+ <!-- HERE  SET INJECTION  -->
+ <set>
+ <value>MP</value>
+ <value>UP</value>
+ <value>Delhi</value>
+ <value>LuckNow</value>
+ </set>
+ <!--  SET INJECTION  COMPLECTED -->
+ </property>
+ 
+ 
+ 
+ 
+ <!-- HERE  MAP INJECTION  -->
+ <property name="courses">
+ <!-- HERE  MAP INJECTION  -->
+ <!-- MAP WORKS ON KEY VALUE PAIR SO YOU HAVE TO DEFINE (KEY,VALUE) IT CAN BE ANY LIKE STRING INT  -->
+ 
+ <map>
+ <entry key="JAVA" value="3 MONTHS" />         <!-- Self CLOSING TAG  -->
+ <entry key="RUBY" value="4 MONTHS" />
+ <entry key="KOTLIN" value ="5 MONTHS"  />
+ </map>
+ <!--   MAP INJECTION COMPLETE  -->
+ </property>
+ 
+ 
+ 
+ 
+ 
+ <!--   Property INJECTION   -->
+ <!--   Property don't allow repeat key value pair   -->
+ <property name="prob">
+ <!--   Property we use props tag   -->
+ <props>
+ <prop key="name1">Katyayni</prop>
+ <prop key="name2">Mritunjay</prop>
+ <prop key="name3">Abhi</prop>
+ </props>
+ </property>
+ 
+ 
+</bean>
+
+
+
+</beans>

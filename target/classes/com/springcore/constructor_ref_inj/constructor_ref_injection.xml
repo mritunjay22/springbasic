@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   
+   
+   
+    <!-- bean First here -->
+<bean class ="com.springcore.constructor_ref_inj.Address" name="addRef1">
+
+<!-- Address class Constructor value in Proper order -->
+<!-- argument first (Default String) -->
+<constructor-arg value="Gazi" />
+<!-- Second Argument -->
+<constructor-arg value="MP" />
+<!-- third Argument   defining type int-->
+<constructor-arg value ="23" type="int" />
+<!-- Address class constructor Complete -->
+
+</bean>
+
+
+
+ <!-- Employee Class Constructor Injection -->
+ <!-- bean Second here -->
+<bean class="com.springcore.constructor_ref_inj.Employee"  name="emp1">
+ <!-- First argument id -->
+<constructor-arg value="101" type ="int"  />
+ <!-- Second Argument name -->
+<constructor-arg value ="MritunjayK"  />
+ <!--Third Argument Address Object  -->
+  <!-- Injection above Bean  or  we can say injecting the address bean object -->
+<constructor-arg>
+<ref bean ="addRef1"/>
+</constructor-arg>
+
+</bean>
+
+
+
+</beans>
